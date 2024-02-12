@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./css/output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.google.com/specimen/Nunito+Sans"
+    />
+    <title>Document</title>
+  </head>
+  <body class="max-w-screen-2xl dark:bg-[#202C36] bg-white">
+    <nav
+      class="bg-white dark:bg-[#2B3844] flex justify-between p-5 shadow-xl items-center"
+    >
+      <div class="">
+        <p class="font-semibold text-black dark:text-white">
+          Where in the world?
+        </p>
+      </div>
+      <div class="flex gap-3 items-center">
+        <img src="./images/Path.png" alt="moon" class="hidden" />
+        <img src="./images/Group 3.png" alt="moon" class="" />
+        <button class="text-black btn-light-mode dark:text-white">
+          Dark mode
+        </button>
+      </div>
+    </nav>
+
+    <main class="mt-5 pl-3 pr-4">
+      <div
+        class="relative lg:flex lg:items-center lg:justify-between lg:pl-5 lg:pr-5 search-region-container"
+      >
+        <input
+          type="text"
+          class="w-full bg-white dark:bg-[#2B3844] p-4 rounded-md text-black dark:text-white indent-12 xl:indent-16 placeholder:font-[551] placeholder:text-xs lg:max-w-md search-coutry-el shadow-lg"
+          placeholder="Search for a country..."
+        />
+        <img
+          src="./images/search.svg"
+          alt="search"
+          class="absolute top-[14%] left-7 w-4 lg:top-[40%] lg:left-[5%] hidden"
+        />
+        <img
+          src="./images/search_light.svg"
+          alt="search"
+          class="absolute top-[14%] left-7 w-4 lg:top-[40%] lg:left-[5%]"
+        />
+        <div
+          class="flex bg-white dark:bg-[#2B3844] mt-10 items-center justify-between max-w-52 p-4 rounded-md relative pl-6 filter-container-el lg:mt-0 lg:gap-7 shadow-lg"
+        >
+          <p class="text-black dark:text-white text-xs w-full">
+            Filter by Region
+          </p>
+          <button class="btn-filter">
+            <img src="./images/Group 2_light.png" alt="down arrow" class="" />
+            <img src="./images/Group 2.png" alt="down arrow" class="hidden" />
+          </button>
+
+          <div
+            class="absolute top-[110%] bg-white dark:bg-[#2B3844] dark:text-white text-black shadow-lg left-0 p-3 w-full rounded-md pl-7 hidden regions-el"
+          >
+            <ul class="flex flex-col gap-1">
+              <li class="region-el">Africa</li>
+              <li class="region-el">America</li>
+              <li class="region-el">Asia</li>
+              <li class="region-el">Europe</li>
+              <li class="region-el">Oceania</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- COUNTRIES -->
+
+      <div
+        class="grid lg:grid-cols-4 sm:grid-cols-2 min-[800px]:grid-cols-3 lg:gap-14 gap-10 p-5 mt-3 rounded-t-md countries-container"
+      >
+        <!-- <div
+          class="aspect-w-1 aspect-h-1 flex flex-col country cursor-pointer shadow-lg"
+          data-country-code="${r.alpha3Code}"
+        >
+          <div class="w-full">
+            <img
+              src="https://flagcdn.com/w320/be.png"
+              alt="flag"
+              class="rounded-t-md w-full aspect-[16/9] object-cover"
+            />
+          </div>
+          <div class="text-black bg-white pt-7 pl-5 pb-12 h-full">
+            <h3 class="font-bold text-xl tracking-wide">${r.name}</h3>
+            <h4 class="mt-5 tracking-wide">
+              <span class="font-medium text-lg">Population</span>:
+              <span class="text-base">${r.population}</span>
+            </h4>
+            <h4 class="mt-2 tracking-wide">
+              <span class="font-medium text-lg">Region</span>:
+              <span class="text-base">${r.region}</span>
+            </h4>
+            <h4 class="mt-2 tracking-wide">
+              <span class="font-medium text-lg">Capital</span>:
+              <span class="text-base">${r.capital}</span>
+            </h4>
+          </div>
+        </div> -->
+      </div>
+
+      <!-- COUNTRIES DETAILS -->
+      <div class="countries-details-container hidden">
+        <!-- <div class="mt-12 flex-col gap-16 ml-3 mr-3 mb-5 flex">
+          <div
+            class="text-black flex shadow-xl max-w-24 items-center justify-center gap-2 pt-1 pb-1 pr-3 pl-3 bg-white"
+          >
+            <img src="./images/call-made_light.svg" alt="" />
+            <button>Back</button>
+          </div>
+          <div
+            class="flex flex-col gap-16 lg:items-center lg:justify-start xl:gap-28 min-[900px]:flex-row min-[900px]:gap-10 lg:gap-16"
+          >
+            <div class="lg:max-w-[560px]">
+              <img src="https://flagcdn.com/de.svg" alt="" class="" />
+            </div>
+            <div
+              class="text-black flex flex-col gap-7 lg:gap-4 w-full min-[900px]:gap-2"
+            >
+              <p class="text-2xl font-semibold">Belgium</p>
+              <div
+                class="flex flex-col gap-12 lg:flex-row min-[900px]:flex-row"
+              >
+                <div
+                  class="flex flex-col gap-3 lg:gap-2 lg:flex-1 min-[900px]:gap-2"
+                >
+                  <p>
+                    <span class="font-medium">Native Name:</span>
+                    <span class="text-sm text-black text-opacity-70"
+                      >Belgie</span
+                    >
+                  </p>
+                  <p>
+                    <span class="font-medium">Population:</span>
+                    <span class="text-sm text-black text-opacity-70"
+                      >11,319,551</span
+                    >
+                  </p>
+                  <p>
+                    <span class="font-medium">Region:</span>
+                    <span class="text-sm text-black text-opacity-70"
+                      >Europe</span
+                    >
+                  </p>
+                  <p>
+                    <span class="font-medium">Sub Region:</span>
+                    <span class="text-sm text-black text-opacity-70"
+                      >Western Europe</span
+                    >
+                  </p>
+                  <p>
+                    <span class="font-medium">Capital:</span>
+                    <span class="text-sm text-black text-opacity-70">
+                      Brussels</span
+                    >
+                  </p>
+                </div>
+                <div
+                  class="flex flex-col gap-2 lg:flex-1 min-[900px]:gap-2 min-[900px]:"
+                >
+                  <p>
+                    <span class="font-medium"> Top Level Domain:</span>
+                    <span class="text-sm text-black text-opacity-70">be</span>
+                  </p>
+                  <p>
+                    <span class="font-medium">Currencies:</span>
+                    <span class="text-sm text-black text-opacity-70">Euro</span>
+                  </p>
+                  <p>
+                    <span class="font-medium">Languages:</span>
+                    <span class="text-sm text-black text-opacity-70"
+                      >Dutch, French, German</span
+                    >
+                  </p>
+                </div>
+              </div>
+              <div
+                class="mt-2 lg:mt-5 flex flex-col min-[900px]:flex-row min-[900px]:items-center min-[900px]:gap-3"
+              >
+                <p>Border Countries:</p>
+                <div
+                  class="flex gap-3 mt-3 items-center flex-wrap lg:mt-0 min-[900px]:mt-0"
+                >
+                  <p
+                    class="bg-white pr-6 pl-6 pt-[5px] pb-[5px] text-sm drop-shadow-xl"
+                  >
+                    France
+                  </p>
+                  <p
+                    class="bg-white shadow-xl pr-6 pl-6 pt-[5px] pb-[5px] text-sm"
+                  >
+                    Germany
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
