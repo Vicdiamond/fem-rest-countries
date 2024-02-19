@@ -200,7 +200,11 @@ const getSearchedCountry = function () {
     })
 
     responses.forEach(response => {
-      if (response.name.toLowerCase().includes(`${searchedCountry.value}`)) {
+      if (
+        response.name
+          .toLowerCase()
+          .includes(`${searchedCountry.value.toLowerCase()}`)
+      ) {
         renderCountry(response)
       } else {
         countries.forEach(country => {
